@@ -9,11 +9,9 @@
 	    $.getJSON('http://www.geoplugin.net/json.gp', function(data) {
         let fullData = JSON.stringify(data, null, 2);
 		const dataObj = data;
-		console.log(dataObj);
         let yourIp = dataObj.geoplugin_request;
 		let latitude = dataObj.geoplugin_latitude;
 		let longitude = dataObj.geoplugin_longitude;
-		console.log(latitude);
 		document.getElementsByClassName("ip")[0].innerHTML = yourIp + '<br>' + latitude + '<br>' + longitude;
         });
       </script>
