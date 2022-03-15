@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+	  <title>nicedude</title>
+	  <meta name="keywords" content="youthinkyoursocollhuh">
+      <link rel="stylesheet" href="kikostyle.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script>
+	    $.getJSON('http://www.geoplugin.net/json.gp', function(data) {
+        let fullData = JSON.stringify(data, null, 2);
+		const dataObj = data;
+        let yourIp = dataObj.geoplugin_request;
+		let latitude = dataObj.geoplugin_latitude;
+		let longitude = dataObj.geoplugin_longitude;
+		document.getElementsByClassName("ip")[0].innerHTML = yourIp + '<br>' + latitude + '<br>' + longitude;
+        });
+      </script>
+    </head>
+    <body>
+      <main>
+		<image src="https://c.tenor.com/f4MzvvjwUhAAAAAC/spongebob-mocking.gif" class="center"></image>
+		<p class="ip" style="color:white; font-size:75px; text-align:center; position:fixed; right:0; left:0; bottom:275px; margin-left:auto; margin-right:auto; width:fit-content"></p>
+      </main>
+	  <footer>@KikosMemories
+		<!-- Kiko day 2021 has gone very well -->
+		<!-- thanks to all the happy babies out there -->
+    </body>  
+  </html>
